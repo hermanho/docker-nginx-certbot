@@ -16,6 +16,7 @@ auto_enable_configs
 # Start up nginx, save PID so we can reload config inside of run_certbot.sh
 nginx -g "daemon off;" &
 export NGINX_PID=$!
+sleep 5
 
 # Lastly, run startup scripts
 for f in /scripts/startup/*.sh; do
